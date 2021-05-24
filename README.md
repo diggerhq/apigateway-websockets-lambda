@@ -34,8 +34,12 @@ dg env apply test
 
 Create a DynamoDB table with a name of your chooice. Next, you can configure the environment variables as follows:
 
+<img width="1251" alt="Screenshot 2021-05-24 at 22 28 45" src="https://user-images.githubusercontent.com/1627972/119398098-bf692500-bcdf-11eb-950b-4e18e73e45d5.png">
+
+
 over in app.digger.dev, create the following environment variable with `TABLE_NAME={your_table_name}`
 
+<img width="1280" alt="Screenshot 2021-05-24 at 22 30 54" src="https://user-images.githubusercontent.com/1627972/119398110-c2641580-bcdf-11eb-99e3-f62ba953a3dd.png">
 
 
 # 4. Release your services
@@ -52,7 +56,9 @@ dg env release test
 
 The template will create an API Gateway with the name of `{project_name}-{environment_name}`
 
-You need to link three endpoints to your corresponding three services: `onConnect`, `onDisconnect` and `sendMessage`:
+You need to link three endpoints to your corresponding three services: `onConnect`, `onDisconnect` and `sendMessage`
+
+![Uploading Screenshot 2021-05-24 at 22.31.44.png…]()
 
 
 Finally you need to deploy your API. Create a new stage (example Default). Note down the API Gateway URL as well as the stage name for the next step.
