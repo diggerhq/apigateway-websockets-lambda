@@ -10,6 +10,9 @@ Use the following to create a default ECR repository in your region:
 ```
 dg env create default --target diggerhq/target-lambda@default
 dg env apply default
+# This is needed to create an initial image in the repository (you can select any service)
+dg env build
+dg env push
 ```
 Once this command is done you will see a docker_registry as output. You can copy that value and append `:latest` to it. Create a file `digger.config.yml` and include the following contents in it:
 
@@ -20,7 +23,28 @@ default:
 
 ## 2. Create an environment
 
+Use the following commands to create the environment with your services:
+
+```
+dg env create test --target diggerhq/target-lambda@ws
+dg env apply test
+```
+
 ## 3. Create DynamoDB table
+
+Create a DynamoDB table with a name of your chooice. Next, you can configure the environment variables as follows:
+
+over in app.digger.dev, create the following environment variable with 
+
+# 4. Release your services
+
+```
+# (select any service)
+dg env build test
+dg env push test
+# do the release for all services
+dg env release test
+```
 
 ## 4. Configure API gateway
 
