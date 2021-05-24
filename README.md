@@ -58,7 +58,7 @@ The template will create an API Gateway with the name of `{project_name}-{enviro
 
 You need to link three endpoints to your corresponding three services: `onConnect`, `onDisconnect` and `sendMessage`
 
-![Uploading Screenshot 2021-05-24 at 22.31.44.png…]()
+<img width="1280" alt="Screenshot 2021-05-24 at 22 31 44" src="https://user-images.githubusercontent.com/1627972/119407446-e9751400-bcec-11eb-9f89-1474069cb36c.png">
 
 
 Finally you need to deploy your API. Create a new stage (example Default). Note down the API Gateway URL as well as the stage name for the next step.
