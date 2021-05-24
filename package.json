@@ -1,0 +1,12 @@
+{
+  "name": "apigw-websockets",
+  "version": "1.0.0",
+  "description": "WebSockets on API Gateway",
+  "main": "app.js",
+  "author": "Mohamed Habib",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "aws-sdk": "^2.739.0"
+  }
+}
