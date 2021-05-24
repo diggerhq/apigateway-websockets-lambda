@@ -5,6 +5,19 @@ Sample repository for using API gateway to handle lambda websockets
 
 ## 1. Create default ECR repository
 
+Use the following to create a default ECR repository in your region:
+
+```
+dg env create default --target diggerhq/target-lambda@default
+dg env apply default
+```
+Once this command is done you will see a docker_registry as output. You can copy that value and append `:latest` to it. Create a file `digger.config.yml` and include the following contents in it:
+
+```
+default:
+  image_uri: "<<account_id>>.dkr.ecr.eu-central-1.amazonaws.com/lambda-default:latest"
+```
+
 ## 2. Create an environment
 
 ## 3. Create DynamoDB table
