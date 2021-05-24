@@ -1,0 +1,30 @@
+project:
+  name: dg-ws
+environments:
+  local-docker:
+    target: docker
+services: 
+  on_connect:
+    service_name: onconnect
+    # We use root path because that is what digger uses
+    # as the path for docker context
+    path: ./
+    service_type: serverless
+    lambda_handler: onConnect.handler 
+    dockerfile: ./Dockerfile
+  on_disconnect:
+    service_name: ondisconnect
+    # We use root path because that is what digger uses
+    # as the path for docker context
+    path: ./
+    service_type: serverless
+    lambda_handler: onDisconnect.handler 
+    dockerfile: ./Dockerfile
+  send_message:
+    service_name: sendmessage
+    # We use root path because that is what digger uses
+    # as the path for docker context
+    path: ./
+    service_type: serverless
+    lambda_handler: sendMessage.handler 
+    dockerfile: ./Dockerfile

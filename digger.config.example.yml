@@ -1,0 +1,2 @@
+  default:
+    image_uri: "<<account_id>>.dkr.ecr.eu-central-1.amazonaws.com/lambda-default:latest"
