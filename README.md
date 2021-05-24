@@ -34,7 +34,9 @@ dg env apply test
 
 Create a DynamoDB table with a name of your chooice. Next, you can configure the environment variables as follows:
 
-over in app.digger.dev, create the following environment variable with 
+over in app.digger.dev, create the following environment variable with `TABLE_NAME={your_table_name}`
+
+
 
 # 4. Release your services
 
@@ -48,9 +50,17 @@ dg env release test
 
 ## 4. Configure API gateway
 
+The template will create an API Gateway with the name of `{project_name}-{environment_name}`
+
+You need to link three endpoints to your corresponding three services: `onConnect`, `onDisconnect` and `sendMessage`:
+
+
+Finally you need to deploy your API. Create a new stage (example Default). Note down the API Gateway URL as well as the stage name for the next step.
+
+
 ## 5. Test the websocket connection
 
-You can test using `wscat`:
+For this step you can use the Gateway Endpoint as well as the stage as you have noted them down in the next step. You can test using `wscat`:
 
 ```
 npm install -g wscat
